@@ -32,7 +32,7 @@ namespace FilingSystem.Server.Controllers
         }
 
 
-        [HttpPost("file")]
+        [HttpPost("FileUpload")]
         public IActionResult FileUpload(IFormFile file, string folder)
         {
 
@@ -54,7 +54,7 @@ namespace FilingSystem.Server.Controllers
             return Ok(true);
         }
 
-        [HttpPost("folder_name")]
+        [HttpPost("FolderCreate")]
         public bool FolderCreate(string folder_name)
         {
             var current_dir = Directory.GetCurrentDirectory();
@@ -69,7 +69,7 @@ namespace FilingSystem.Server.Controllers
             return true;
         }
 
-        [HttpGet("getFile")]
+        [HttpGet("SearchFile")]
         public IActionResult GetFiles(string folder_name)
 
         {
